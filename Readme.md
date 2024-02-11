@@ -1,6 +1,7 @@
 # AUTOMATION PROJECT: Cat API app
 
-- Repository contains a cypress project that test Ninja Cats API app.
+- The repository contains a cypress project that tests the Ninja Cats API app.
+- GitHub Actions are set and results can be observed there.
 
 # Getting Started
 
