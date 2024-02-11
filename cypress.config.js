@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  projectId: 'db1b11',
   env: {
     apiKey: 'Hff6tE+UWV9ykZXGI1vfiA==eBDxwTKAkMdNrxaR',
     apiCatBaseUrl: 'https://api.api-ninjas.com/v1/cats',
