@@ -1,10 +1,8 @@
 version: 2.1
 orbs:
-  cypress: cypress-io/cypress@3.1.1
+  cypress: cypress-io/cypress@3
 workflows:
   build:
     jobs:
-      - cypress/run:
-          start-command: 'npm run start'
-          cypress-command: 'npx cypress run --parallel --record --group 4 machines'
-          parallelism: 4 # use 4 CircleCI machines to distribute specs
+      - cypress/run # "run" job comes from "cypress" orb
+          start-command: 'npm run test:cats;release'
