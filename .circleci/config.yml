@@ -8,8 +8,4 @@ workflows:
       - cypress/run:
           requires:
             - cypress/install
-    start: npm start
-          parallel: true
-          parallelism: 4
-    record: true
-          group: 4 machines
+    start: npm run test:cats:release
