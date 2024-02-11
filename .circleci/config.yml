@@ -26,11 +26,3 @@ jobs:
       - store_artifacts:
           when: always
           path: ./visual-report
-
-workflows:
-  test_master_product:
-    when: << pipeline.parameters.run_integration_tests >>
-    jobs:
-      - test:
-          context:
-            - google-staging
