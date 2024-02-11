@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:cats:release": "cypress run --spec 'cypress/e2e/api/catSpec.cy.js'",
-    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
-    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
-    
+    "test:cats:release": "cypress run --spec 'cypress/e2e/api/catSpec.cy.js'"   
   },
   "author": "",
   "license": "ISC",

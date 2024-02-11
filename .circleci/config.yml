@@ -1,0 +1,36 @@
+version: 2.1
+orbs:
+  gcp-cli: circleci/gcp-cli@3.1.1
+parameters:
+  run_integration_tests:
+    type: boolean
+    default: false
+jobs:
+  test:
+    parameters:
+      script_name:
+        type: string
+        default: test:cats:release
+    machine:
+      image: ubuntu-2204:2023.10.1
+    steps:
+      - checkout
+      - run: mkdir ./mochawesome-report ./videos ./visual-report
+      - run: npm install
+      - store_artifacts:
+          when: always
+          path: ./mochawesome-report
+      - store_artifacts:
+          when: always
+          path: ./videos
+      - store_artifacts:
+          when: always
+          path: ./visual-report
+
+workflows:
+  test_master_product:
+    when: << pipeline.parameters.run_integration_tests >>
+    jobs:
+      - test:
+          context:
+            - google-staging
