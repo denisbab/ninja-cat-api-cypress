@@ -7,4 +7,5 @@ workflows:
       - cypress/run:
           post-steps: 
             - store_artifacts:
-                path: ./reports/html
+                when: always
+                path: cypress/reports/html
