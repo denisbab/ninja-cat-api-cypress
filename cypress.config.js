@@ -1,6 +1,7 @@
 const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
+  video: true,
   projectId: 'db1b11',
   env: {
     apiKey: 'Hff6tE+UWV9ykZXGI1vfiA==eBDxwTKAkMdNrxaR',
